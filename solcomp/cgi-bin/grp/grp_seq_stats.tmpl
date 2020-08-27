@@ -1,0 +1,53 @@
+<div id='grp_function_overview'>
+    <div class='field'>
+        <div class='field_label'>
+            Species
+        </div>
+        <div class='field_value'>
+            <a href='/species_overview.php?sp=<TMPL_VAR NAME="taxon_id">'><TMPL_VAR NAME="species"></a> [<a href='http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=<TMPL_VAR NAME="taxon_id">'>taxon:<TMPL_VAR NAME="taxon_id"></a>]
+        </div>
+    </div>
+    <div class='field'>
+        <div class='field_label'>
+            Type
+        </div>
+        <div class='field_value'>
+            EST Assembly
+        </div>
+    </div>
+    <div class='field'>
+        <div class='field_label'>
+            Source
+        </div>
+        <div class='field_value'>
+            <a href='http://www.plantgdb.org/search/display/data.php?Seq_ID=<TMPL_VAR NAME="put_id">'>PlantGDB</a>
+        </div>
+    </div>
+    <div class='clear'></div>
+    <div class='field'>
+        <div class='field_label'>
+            Length (bases)
+        </div>
+        <div class='field_value'>
+            <TMPL_VAR NAME="seq_len">
+        </div>
+    </div>
+    <div class='field'>
+        <div class='field_label'>
+            Members
+        </div>
+        <div class='field_value'>
+            <TMPL_VAR NAME="members">
+        </div>
+    </div>
+    <div class='clear'></div>
+    <div class='field'>
+        <div class='field_label'>
+            Annotated function
+        </div>
+        <div class='field_value'>
+            <TMPL_VAR NAME="function">
+        </div>
+    </div>
+    <div class='clear'></div>
+</div>

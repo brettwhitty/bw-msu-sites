@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /includes/
+User-agent: *
+Disallow: /Templates/
+User-agent: *
+Disallow: /services/
+User-agent: *
+Disallow: /*.shtml$
+

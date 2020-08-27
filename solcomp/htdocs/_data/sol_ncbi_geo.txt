@@ -1,0 +1,15 @@
+147425	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid147425%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid147425%5BOrganism%3Aexp%5D
+164110	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid164110%5BOrganism%3Aexp%5D	2	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid164110%5BOrganism%3Aexp%5D
+28526	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid28526%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid28526%5BOrganism%3Aexp%5D
+4072	32448	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4072%5BOrganism%3Aexp%5D	8	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4072%5BOrganism%3Aexp%5D
+4073	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4073%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4073%5BOrganism%3Aexp%5D
+4081	43810	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4081%5BOrganism%3Aexp%5D	33	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4081%5BOrganism%3Aexp%5D
+4096	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4096%5BOrganism%3Aexp%5D	2	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4096%5BOrganism%3Aexp%5D
+4097	32448	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4097%5BOrganism%3Aexp%5D	21	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4097%5BOrganism%3Aexp%5D
+4100	32448	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4100%5BOrganism%3Aexp%5D	13	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4100%5BOrganism%3Aexp%5D
+4102	32448	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4102%5BOrganism%3Aexp%5D	7	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4102%5BOrganism%3Aexp%5D
+4108	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4108%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4108%5BOrganism%3Aexp%5D
+4111	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4111%5BOrganism%3Aexp%5D	4	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4111%5BOrganism%3Aexp%5D
+4113	32448	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid4113%5BOrganism%3Aexp%5D	67	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid4113%5BOrganism%3Aexp%5D
+50514	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid50514%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid50514%5BOrganism%3Aexp%5D
+62890	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=geo&term=txid62890%5BOrganism%3Aexp%5D	--	http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&db=gds&term=txid62890%5BOrganism%3Aexp%5D

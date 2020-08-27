@@ -1,0 +1,147 @@
+/*
+A:link            { text-decoration: none; 
+                    color: #0000FF;
+                  }
+A:visited         { text-decoration: none; 
+                    color: #AA0088;
+                  }
+A:hover           { text-decoration: underline; 
+                  }
+*/
+A.banner          { 
+    color  : #000000;
+    font-size : 0.9em;
+    text-decoration : none;
+                  }
+A.bblue           { 
+    color: #000000;
+    background-color: #9999FF;
+    font-size : 0.9em;
+    text-align: center;
+                  }
+A.bred            { 
+    color: #000000;
+    background-color: #FF6666;
+    font-size : 0.9em;
+    text-align: center;
+                  }
+
+/*                  
+BODY              { background-color: white; 
+                    font-family: sans-serif;
+                    font-size: small;
+                    width: 900px;
+                  }
+H1                { color: #3366FF; 
+                    font-family: sans-serif; 
+                  }
+H2                { color: #23703D; 
+                    font-family: sans-serif; 
+                  }
+H3                { color: #3366FF; 
+                    font-family: sans-serif; 
+                  }
+H4                { color: #3366FF; 
+                    font-family: sans-serif; 
+                  }
+*/
+                  
+INPUT             {
+    background-color: #EFEFEF;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin: 1px;
+}
+
+/*
+P                 { font-family: sans-serif; }
+*/
+
+SELECT            {
+    background-color: #FFFFFF;
+}
+TABLE             {
+    padding: 0;
+    spacing: 0;
+    width: 100%;
+}
+TD                {
+    font-family: sans-serif;
+    padding: 0.1ex;
+    font-size: 1em;
+}
+TH                {
+    font-family: sans-serif;
+    padding: 0;
+    font-size: 1em;
+}
+TH.linkmenu       {
+    font-family: sans-serif;
+    padding: 0;
+    font-size: 0.95em;
+    text-align: center;
+}
+.reset_button     {
+    background-color: #33DD33;
+    color: #FFFFFF;
+}
+.datatitle        {
+    background-color: #999999;
+}
+.databody         {
+    background-color: #DDDDDD;
+}
+.searchtitle      { 
+    background-color: #DDDDDD;
+    font-size: 1em;
+}
+.searchbody       { 
+    background-color: #CCCCCC;
+    font-size: 1em;
+}
+.settingstitle    {
+    background-color: #999999;
+    font-size: 1em;
+}
+.settingsbody     { 
+    background-color: #DDDDDD;
+    font-size: 0.9em;
+}
+.uploadtitle      {
+    background-color: #999999;
+    font-size: 0.9em;
+}
+.uploadbody       {
+    background-color: #DDDDDD;
+    font-size: 0.9em;
+}
+.technicalinfo    {
+    background-color: #FFFFFF;
+}
+.toggle           {
+    color: #3366FF;
+}
+.error            {
+    color: #66FF66;
+}
+.note             {
+    color: #66FF66;
+}
+.pre              {
+    font-family: monospace;
+}
+.popup            {
+    COLOR: #9F141A;
+    CURSOR: help;
+    TEXT-DECORATION: none
+}
+
+#top_select_div {
+                    float: left;
+}
+.select_div {
+                    float: left;
+}
+#ajax_select_div {
+                    float: left; 
+}

@@ -1,0 +1,74 @@
+<div align="center">
+        <img src="<TMPL_VAR NAME="snp_img">" border="0" usemap="#snp_map">
+    <TMPL_IF NAME="has_snps">
+        <table width="300">
+        <tr>
+            <th align="center">SNP<br>Location</th>
+            <th align="center">Reference</th>
+            <th align="center">SNP</th>
+        </tr>
+        <TMPL_LOOP NAME="snp_loop">
+            <tr>
+                <td align="center"><a href='#' class='snp_loc_link'><TMPL_VAR NAME="snp_location"></a></td>
+                <td align="center"><TMPL_VAR NAME="reference"> (<TMPL_VAR NAME="ref_count">)</td>
+                <td align="center"><TMPL_VAR NAME="snp"> (<TMPL_VAR NAME="snp_count">)</td>
+            </tr>
+        </TMPL_LOOP>
+        </table>
+    <TMPL_ELSE>
+        <p>No SNPs in EST assembly meeting prediction criteria.</p>
+    </TMPL_IF>
+</div>
+<div id='put_seq_len' style='display: none; visibility: invisible;'><TMPL_VAR NAME="asm_len"></div>
+<TMPL_VAR NAME="msa">
+<script type='text/javascript'>
+
+    /* add scroll links for MSA */
+    var putLength     = $('put_seq_len').getProperty('text');
+    var scrollerWidth = $('msa_seqs').getScrollSize().x;
+    var viewWidth     = $('msa_seqs').getSize().x;
+
+    /* add links to the image map */
+    $$('area').each(
+        function(el, i){
+            var snpPos = el.getProperty('title');
+            var scrollPos = snpPos / putLength * scrollerWidth - viewWidth / 2;
+            el.addEvent('click',
+                function(e){
+                    new Event(e).stop();
+                    if (! msaDiv.isOpen()) { msaDiv.open(); }
+                    $('msa_seqs').scrollLeft = scrollPos;
+                }
+            );
+        }
+    );
+
+    /* add links to the summary table */
+    $$('a.snp_loc_link').each(
+        function(el, i){
+            var snpPos = el.getProperty('text');
+            var scrollPos = snpPos / putLength * scrollerWidth - viewWidth / 2;
+            el.addEvent('click',
+                function(e){
+                    new Event(e).stop();
+                    if (! msaDiv.isOpen()) { msaDiv.open(); }
+                    $('msa_seqs').scrollLeft = scrollPos;
+                }
+            );
+            el.setStyle('pointer', 'hand');
+        }
+    );
+
+    /* add NCBI links to legend items */
+    $$('div.msa_legend_seq').each(
+        function(el, i){
+            var legendText = el.getProperty('text');
+            var textArr = legendText.split(" ");
+            var newText = '<a href="http://ncbi.nlm.nih.gov/nucest/' + textArr[0] + '" target="ncbi">'
+            + textArr[0] + textArr[1] + '</a>';
+            var legendText = el.setProperty('html', newText);
+        }
+    );
+
+    var msaDiv = new CollapseDiv('msa_container', 'Assembly Multiple Sequence Alignment', false);
+</script>

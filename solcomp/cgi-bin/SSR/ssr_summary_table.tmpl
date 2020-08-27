@@ -1,0 +1,64 @@
+<table id='ssr_summary' class='table_medium'>
+    <thead>
+        <tr>
+            <th>Species</th>
+            <th>Number of Sequences Examined</th>
+            <th>Size of Examined Sequences (bp)</th>
+            <th>Number of SSRs Identified</th>
+            <th>Number of SSR-containing Sequences</th>
+            <th>Number of Sequences Containing >1 SSR</th>
+            <th>Number of SSRs in Tandem Formation</th> 
+            <th>Number of SSRs with Unit Size 1</th>
+            <th>Number of SSRs with Unit Size 2</th>
+            <th>Number of SSRs with Unit Size 3</th>
+            <th>Number of SSRs with Unit Size 4</th>
+            <th>Number of SSRs with Unit Size 5</th>
+            <th>Number of SSRs with Unit Size 6</th>
+        </tr>
+    </thead>
+    <tbody>
+<TMPL_LOOP NAME="summary_table">
+        <tr>
+            <td>
+            <i><TMPL_VAR NAME="species"></i>
+            </td>
+            <td>
+            <TMPL_VAR NAME="asm_count">
+            </td>
+            <td>
+            <TMPL_VAR NAME="asm_len_total">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_total">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_asm_count">
+            </td>
+            <td>
+            <TMPL_VAR NAME="multi_ssr_asm_count">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_tandem_count">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_1">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_2">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_3">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_4">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_5">
+            </td>
+            <td>
+            <TMPL_VAR NAME="ssr_count_6">
+            </td>
+        </tr>
+</TMPL_LOOP>
+    </tbody>
+</table>

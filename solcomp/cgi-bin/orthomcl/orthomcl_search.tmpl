@@ -1,0 +1,32 @@
+    <div id='orthomcl_contents'>
+
+        <div class='detach_div'></div>
+
+        <h2>OrthoMCL Cluster Annotation Keyword Search</h2>
+          
+            <!-- content goes below -->
+<p>Search for '<TMPL_VAR NAME="search_key">' Returned <strong><TMPL_VAR NAME="total_results"></strong> Clusters</p>
+<p>
+    <table id='result_table'>
+        <thead>
+            <tr>
+                <th align='center'>Cluster Identifier</th>
+                <th align='center'>Annotation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <TMPL_LOOP NAME="search_results">
+            <tr>
+                <td align='center'>
+                    <a href='/analyses/ortholog_paralog?clid=<TMPL_VAR NAME="cluster_id">'><TMPL_VAR NAME="cluster_id"></a>
+                </td>
+                <td align='center'>
+                    <TMPL_VAR NAME="annotation">
+                </td>
+            </tr>
+            </TMPL_LOOP>
+        </tbody>
+    </table>
+</p>
+            <!-- content goes above -->
+    </div>

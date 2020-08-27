@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE rootElement [
+<!ENTITY species SYSTEM "http://localhost/includes/species_xml.inc.php">
+]>
+<site>
+
+    <!-- HOME -->
+    <page name="Home" title="Solanaceae Genomics Resource" src="/">
+        <page name="News" title="News" src="/home/news"/>
+        <page name="FAQ" title="Frequently Asked Questions" src="/home/faq"/>
+<!--        <page name="Screencasts" title="SGR Screencasts" src="/home/screencasts"></page> -->
+        <page name="Links" title="Links" src="/home/links"/>
+        <page name="Contact Us" title="Contact Us" src="/home/contact"/>
+    </page>
+
+    <!-- PROJECTS -->
+    <page name="Projects" title="Projects" src="/projects">
+        <![CDATA[
+        ]]>
+        <page name="Solanaceae Comparative Genomics" alt="Sol Comparative Genomics" title="Comparative Genomics Resources for the Solanaceae" src="/projects/solcomp">
+            <![CDATA[
+            <p>Overview of the Solanaceae Genomics Resource project.</p>
+            ]]>
+            <page name="Solanaceae Genome Facts" title="Solanaceae Genome Facts" src="/projects/solcomp/facts"/>
+            <page name="Data Versioning" title="Data Versioning" src="/projects/solcomp/version"/>
+        </page>
+        <page name="Potato Genome Sequencing" alt="Potato Sequencing" title="Potato Genome Sequence and Annotation Resource" src="/projects/potato">
+            <![CDATA[
+            <p>Information on our Potato sequencing and annotation projects.</p>
+            ]]>
+            <page hidden="1" name="RH Chr. 6" title="Solanum tuberosum RH Chr. 6 BAC Sequencing" src="/projects/potato/chr6"/>
+            <page hidden="1" name="Phureja DM Genome" title="Solanum phureja DM Genome" src="/projects/potato/phureja"/> 
+        </page>
+    </page>
+
+    <!-- SPECIES -->
+    <page name="Species" title="Solanaceae Species Pages" src="/species">
+    <!-- dynamically generated / evaluate with 'xmllint noent FILENAME' -->
+        <page name="Solanum" title="SGR Species in Solanum" src="/species/Solanum">
+            <page name="&lt;em&gt;Solanum tuberosum&lt;/em&gt;" title="SGR Species Overview for Solanum tuberosum" src="/species/overview/4113"/>
+        </page>
+
+    </page>
+
+    <!-- ANALYSES/TOOLS -->
+    <page name="Analyses/Tools" title="Analyses/Tools" src="/analyses">
+        <page name="Genome Browsers" title="Genome Browsers" src="/tools/gbrowse">
+            <![CDATA[
+            <p>Comparative genome databases for the Solanaceae using the <a href="http://gmod.org/wiki/index/Gbrowse">GMOD Generic Genome Browser</a> GMOD Generic Genome Browser.</p>
+            ]]>
+            <page name="Solanaceae" title="Solanaceae Comparative Genome Browser" src="/cgi-bin/gbrowse/solanaceae">
+                <![CDATA[
+                ]]>
+            </page>
+            <page name="Arabidopsis" title="Arabidopsis vs. Solanaceae Comparative Genome Browser" src="/cgi-bin/gbrowse/arabidopsis">
+                <![CDATA[
+                ]]>
+            </page>
+            <page name="Grape" title="Grape vs. Solanaceae Comparative Genome Browser" src="/cgi-bin/gbrowse/grape">
+                <![CDATA[
+                ]]>
+            </page>
+            <page name="Poplar" title="Poplar vs. Solanaceae Comparative Genome Browser" src="/cgi-bin/gbrowse/solanaceae">
+                <![CDATA[
+                ]]>
+            </page>
+        </page>
+        <page name="BLAST Search" title="BLAST Search" src="/tools/blast">
+            <![CDATA[
+            <p>BLAST tool for searching sequences against the Solanaceae Genomics Resource databases.</p>
+            ]]>
+        </page>
+        <page name="Comparative Mapping" title="Solanaceae Comparative Mapping" src="/analyses/sol_mapping">
+            <![CDATA[
+            <p>Arabidopsis, Grape and Poplar top hits for Solanaceae sequences.</p>
+            ]]>
+        </page>
+        <page name="Ortholog/Paralog Database Search" alt="Orthologs/Paralogs" title="Solanaceae Ortholog/Paralog Analysis" src="/analyses/ortholog_paralog">
+            <![CDATA[
+            <p>Results from assignment of putative orthology/paralogy for Solanaceae genes.</p>
+            ]]>
+        </page>
+        <page name="Lineage-Specific Transcripts" alt="Lineage-Specific Genes" title="Solanaceae Lineage-Specific Gene Analysis" src="/analyses/lineage_specific">
+            <![CDATA[
+            <p>Results from analysis to identify Solanaceae lineage-specific transcripts.</p>
+            ]]>
+        </page>
+        <page name="SNPs" title="Solanaceae SNP Analysis" src="/analyses/snp">
+            <![CDATA[
+            <p>SNPs predicted from Solanaceae transcript assemblies.</p>
+            ]]>
+        </page>
+        <page name="SSRs" title="Solanaceae SSR Analysis" src="/analyses/ssr">
+            <![CDATA[
+            <p>Simple sequence repeats identified in Solanaceae sequence.</p>
+            ]]>
+            <page name="SSR Database Search" title="Solanaceae SSR Database Search" src="/analyses/ssr/query"/>
+            <page name="SSR Summary Statistics" title="Solanaceae SSR Database Summary Statistics" src="/analyses/ssr/summary"/>
+            <page name="SSR Pipeline Overview" alt="SSR Pipeline" title="Solanaceae SSR Database Pipeline Overview" src="/analyses/ssr/pipeline"/>
+            <page name="SSR Downloads" alt="SSR Downloads" title="Solanaceae SSR Database Downloads" src="ftp://ftp.plantbiology.msu.edu/pub/sgr/other/ssr/" hidden="1"/>
+        </page>
+        <page name="QTL Papers" title="QTL Papers" src="/analyses/qtl_papers">
+            <![CDATA[
+            <p>List of papers with QTL data for Solanaceae species.</p>
+            ]]>
+        </page>
+        <page name="Solanaceae Repeat Database" title="Solanaceae Repeat Database" src="/analyses/sol_repeat">
+            <![CDATA[
+            <p>Repeat regions identified in Solanaceae transcript assemblies.</p>
+            ]]>
+        </page>
+    </page>
+    
+    <!-- SEARCH -->
+    <page name="Search" title="Database Search" src="/search">
+    </page>
+
+    <!-- DOWNLOADS -->
+    <page name="Downloads" title="Downloads" src="/downloads">
+        <page name="&lt;img class='mini_icon' src='/images/folder.png'&gt;FTP Site" title="FTP Site" src="ftp://ftp.plantbiology.msu.edu/pub/sgr/"/>
+    </page>
+    
+</site>

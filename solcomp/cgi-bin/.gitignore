@@ -1,0 +1,14 @@
+.attic/
+share/
+study/*.pl
+study/*_db
+study/*.txt
+study/*.pm
+study/backup/
+.bin
+gbrowse
+gbrowse_details
+gbrowse_est
+gbrowse_img
+gbrowse_moby
+gbrowse_syn

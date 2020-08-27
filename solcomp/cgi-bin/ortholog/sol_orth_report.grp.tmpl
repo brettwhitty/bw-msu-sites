@@ -1,0 +1,32 @@
+<div>
+    <table id="grp_orth_report_table">
+        <thead>
+            <tr>
+            <th align="center">PUT Identifier</th>
+            <th align="center">Length</th>
+            <th align="center">% Identity</th>
+            <th align="center">% Similarity</th>
+            <th align="center">% Coverage</th>
+            <th align="center">E-value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <TMPL_LOOP NAME ="elem_table">
+            <tr>
+                <td align="center"><a href="/gene_overview.php?id=<TMPL_VAR NAME="target_ta">"><TMPL_VAR NAME="target_ta"></a></td>
+                <!-- <td width="100px" align="center"><i><TMPL_VAR NAME="sci_name"></i></td> -->
+                <td width="100px" align="center"><TMPL_VAR NAME="target_length"></td>
+                <td width="100px" align="center"><TMPL_VAR NAME="per_id"></td>
+                <td width="100px" align="center"><TMPL_VAR NAME="per_sim"></td>
+                <td width="100px" align="center"><TMPL_VAR NAME="per_coverage"></td>
+                <td width="100px" align="center"><TMPL_VAR NAME="e_value"></td>
+            </tr>
+            </TMPL_LOOP>
+        </tbody>
+    </table>
+</div>
+<div id='ortholog_fasta' align="left"><pre><TMPL_VAR NAME="fasta"></pre></div>
+<script type='text/javascript'>
+    new SortingTable('grp_orth_report_table', {zebra: true});
+    new CollapseDiv('ortholog_fasta', 'FASTA Sequence', true);
+</script>

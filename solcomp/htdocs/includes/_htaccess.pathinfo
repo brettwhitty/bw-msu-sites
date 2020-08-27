@@ -1,0 +1,17 @@
+## This file must be copied into the root of 'htdocs' and renamed to '.htaccess'
+## to allow 'pathinfo.inc.php' to work properly.
+
+<IfDefine APACHE2>
+    AcceptPathInfo on
+</IfDefine>
+
+RewriteEngine on
+RewriteBase /
+
+# Hide '.dev' and '_data' directories by redirecting the request to index.php
+RewriteRule ^(\.dev|_data|\.svn) index.php/$1 [L]
+
+# Only rewrite if file or directory doesn't actually exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]

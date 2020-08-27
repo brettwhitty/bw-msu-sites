@@ -1,0 +1,924 @@
+@charset "UTF-8";
+html {
+ overflow-y: scroll;
+}
+body {
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    /*  font: 100% Arial, Helvetica, sans-serif;*/
+/*  background: #006633;*/
+background: #CCCCFF;
+    margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+    padding: 0;
+    text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+ overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ /* width: 99%; */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+table {
+    background: #FFFFFF;
+    border: 0px;
+    border-collapse: collapse;
+/*  font-size: 0.8em; */
+    margin-bottom: 10px;
+/*  border-spacing: 0;*/
+}
+.table_small {
+    font-size: 0.8em;
+}
+.table_medium {
+    font-size: 0.9em;
+}
+.table_large {
+    font-size: 1.1em;
+}
+th {
+    background: #BBBBBB;
+    /*background: #BBBBBB url(/images/sort_arrow.png) no-repeat 0em 1em;
+    padding-left: 1em;*/
+    padding: 2px 4px;
+}
+th.no_sort {
+    background: #BBBBBB;
+    padding: 2px 4px;
+}
+.reverse_sort {
+    background: #FFBBBB;
+    /*
+    background: #FFBBBB url(/images/sort_desc.png) no-repeat 0em 1em;
+    padding-left: 1em;
+    */
+}
+.forward_sort {
+    background: #BBFFBB;
+    /*
+    background: #BBFFBB url(/images/sort_asc.png) no-repeat 0em 1em;
+    padding-left: 1em;
+    */
+}
+td {
+    padding: 2px 4px;
+/*  padding: 0px;*/
+}
+/*
+tr {
+    background: #FFFFFF;
+}
+.tr-even {
+    background: #DDDDDD;
+}
+*/
+tr {
+    background: #DDDDDD;
+}
+.alt {
+    background: #E0EEE0;
+}
+.oneColElsCtrHdr h1 {
+    font-size: 1.25em;
+    margin-top: 5px;
+}
+.oneColElsCtrHdr h2 {
+    color: #191919;
+    font-size: 1.15em;
+    margin-top: 5px;
+}
+.oneColElsCtrHdr h3 {
+    color: #333333;
+    font-size: 1.10em;
+    margin-top: 5px;
+}
+.oneColElsCtrHdr h4 {
+    color: #666666;
+    font-style: italic;
+    font-size: 1.10em;
+    margin-top: 5px;
+}
+.oneColElsCtrHdr h1 a {
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    color: inherit;
+}
+.oneColElsCtrHdr h2 a {
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    color: inherit;
+}
+.oneColElsCtrHdr h3 a {
+    text-decoration: none;
+    border-bottom: 2px dotted;  
+    color: inherit;
+}
+.oneColElsCtrHdr h4 a {
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    color: inherit;
+}
+.oneColElsCtrHdr a {
+    color: #330033;
+}
+.oneColElsCtrHdr p {
+/*  margin-top: 0.1em;*/
+}
+.oneColElsCtrHdr a:hover {
+    background-color: #9030C5;
+    color: #FFFFFF;
+    border-bottom: none;
+}
+#logo{
+    padding-top: 5px;
+    padding-bottom: 0px;
+    height: 65px;
+    clear: both;
+}
+
+#google_search {
+    float: right;
+    padding-top: 18px;
+    margin-right: 15px;
+    height: 19px;
+}
+#search_box {
+    font-size: 0.8em;
+    color: #999999;
+    width: 125px;
+}
+#go {
+  vertical-align: middle;
+  width: 30px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent url(/images/go_button.gif) no-repeat center top;
+/*  text-indent: -1000em;*/
+  cursor: pointer; /* hand-shaped cursor */
+    cursor: hand; /* for IE 5.x */
+}
+
+.menuContainer {
+    width: 100%;
+    margin: 0px;
+}
+
+#gbrowse_iframe {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+}
+#menushadow {
+    background-image: url(/images/menu_shadow.gif);
+    background-repeat: repeat-x;
+    height: 6px;
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+#footershadow {
+    background-image: url(/images/menu_shadow_bottom.gif);
+    background-repeat: repeat-x;
+    height: 6px;
+    width: 984px;
+    float: left;
+    clear: both;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.oneColElsCtrHdr #container {
+    width: 984px;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+    background: #FFFFFF;
+    margin: 5px auto; /* the auto margins (in conjunction with a width) center the page */
+    border: 1px solid #999999;
+    text-align: left;
+}
+.oneColElsCtrHdr #header {
+    padding: 0px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+    /*
+    background-color: #DDDDDD;
+    background-image: url(wild_potato_flower.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -50px -105px;
+    */
+/*    background: #CCCCCC url(/images/logo_image.wild_potato.png) no-repeat 0px 0px;  */
+    background: #CCCCCC no-repeat 0px 0px;
+    margin: 0px;
+}
+.oneColElsCtrHdr #menuContainer {
+    width: 984px;
+}
+.oneColElsCtrHdr #header h1 {
+    margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+    padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.oneColElsCtrHdr #mainContent {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: #FFFFFF;
+}
+.oneColElsCtrHdr #footer {
+    background:#CCCCCC;
+    display: block;
+    clear: both;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    height: 50px;
+} 
+.oneColElsCtrHdr #footer p {
+    margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+    padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+/*.oneColElsCtrHdr #footer div {
+    padding: 0;
+    margin: 0;
+}*/
+#footer_logos {
+    margin-top: 5px;
+}
+#footer_text {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+.oneColElsCtrHdr #footer img {
+    vertical-align:middle;
+    border:0px;
+}
+#footer a:hover img {
+    background-color: #CCCCCC;
+    text-decoration: none;
+}
+#submenu_left {
+    background: #F0F0F0;
+    float: left;
+    width: 145px;
+    height: 100%;
+    margin-left: -10px;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border: #AAAAAA 1px solid;
+    font-size: 0.7em;
+}
+#submenu_left ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+#submenu_left ul li {
+    margin-bottom: 0.1em;
+}
+
+#submenu_left li a {
+        text-decoration: none;
+        color: #333333;
+}
+
+#submenu_left li a:hover {
+    background-color: #9030C5;
+    color: #FFFFFF;
+}
+
+a.current {
+    background-color: #A84DFF;
+    color: #FFFFFF;
+}
+
+#submenu_left li {
+    color: #666;
+    font-weight: 500;
+}
+#submenu_content {
+    margin-left: 150px;
+    padding-left: 0px;
+}
+.coming_soon {
+    background: #EEEEEE;
+    font-style: italic;
+    color:#666666;
+    width: 765px;
+    height: auto;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    margin-left: +10px;
+    border: #AAAAAA 1px solid;
+}
+.coming_soon h1,h2,h3,h4 {
+    color:#666666;
+}
+.ajax-loading {
+/*    width: 700px; */
+    height: 50px;
+    padding: 25px;
+    background: url(/images/spinner.gif) no-repeat center;
+}
+.ajax-loading-span {
+    padding-left: 1.33em;
+/*    background: url(/images/progress.gif) no-repeat 0em 0.25em; */
+    background: url(/images/spinner_small.gif) no-repeat 0 1px;
+}
+.notice_box {
+    text-align: center;
+    font-size: 0.98em;
+    width: 450px;
+    height: auto;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    margin-left: +10px;
+}
+.nb_grey {
+    background: #DCDCDC;
+    color:#666666;
+    border: #AAAAAA 1px solid;
+}
+.nb_green {
+    background: #A6CA71;
+/*  color:#006633; */
+    border: #869A41 1px solid;
+}
+.nb_purple {
+    background: #CC99FF;
+    color:#330066;
+    border: #663399 1px solid;
+}
+.search_div {
+    width: 700px;
+}
+.collapse_box_header {
+  height: 2em;
+  padding-top: 0em;
+  padding-left: 1.2em;
+  margin-top: 1em;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: #E0F9E0 url(/images/down-arrow-grey.gif) no-repeat 0.1em 0.5em;
+  border:1px solid #C9E1C9;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+}
+.expand_box_header {
+  height: 2em;
+  padding-top: 0em;
+  padding-left: 1.2em;
+  margin-top: 1em;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: #BBBBBB url(/images/right-arrow-grey.gif) no-repeat 0.2em 0.5em;
+  border:1px solid #A1A1A1;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+}
+
+
+/* styles for ajaxDiv class */
+.ajaxdiv_open {
+  height: 2em;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 800;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 1em;
+  background: #E0F9E0 url(/images/down-arrow-grey.gif) no-repeat 0.1em 0.5em;
+  border:1px solid #C9E1C9;
+}
+.ajaxdiv_closed {
+  height: 2em;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 800;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 1em;
+  background: #BBBBBB url(/images/right-arrow-grey.gif) no-repeat 0.2em 0.5em;
+  border:1px solid #A1A1A1;
+}
+.ajaxdiv_title {
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  padding-left: 1.2em;
+  padding-top: 0.5em;
+  float: left;
+}
+.ajaxdiv_header_icon {
+  float: right;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  margin-right: 1.2ex;
+  padding-top: 0.5em;
+}
+.ajaxdiv_help_icon {
+  float: right;
+  cursor: help; /* hand-shaped cursor */
+  margin-right: 1.2ex;
+  padding-top: 0.5em;
+}
+.ajaxdiv_top_menu {
+    float: right;
+    height: 1.5em;
+}
+.ajaxdiv_top_button {
+  border: 1px dotted;
+  background-color: #CCFFCC;
+  float: right;
+  padding: 0.2em 0.3em;
+  margin-right: 1em;
+  cursor: pointer;  /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  font-weight: 800;
+  font-size: 0.9em;
+}
+.ajaxdiv_content {
+    border: solid #BBBBBB 1px;
+    border-top: 0px;
+    padding: 0.5em;
+}
+.ajaxdiv_content_borderless {
+    padding: 0.5em;
+}
+
+/********************************/
+
+/* styles for ajaxDiv class */
+.collapsediv_open {
+  height: 1.2em;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 800;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0.2em;
+  margin-top: 0;
+  margin-bottom: 1px;
+  background: url(/images/minus.png) no-repeat 0.1em 0.1em;
+}
+.collapsediv_closed {
+  height: 1.2em;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 800;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1px;
+  background: url(/images/plus.png) no-repeat 0.1em 0.1em;
+}
+.collapsediv_title {
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  padding-left: 16px;
+  padding-top: 0;
+  float: left;
+/*  border: dashed #CCCCCC 1px; */
+}
+.collapsediv_header_icon {
+  float: right;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  margin-right: 1.2ex;
+  padding-top: 0;
+}
+/********************************/
+
+/* breadcrumbs */
+#bread {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #666;
+    /*  background-color: #006; */
+    padding-top: 2px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-left: -5px;
+    }
+
+#bread ul {
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+    border: none;
+    } 
+
+#bread ul li {
+    margin-left: 0;
+    padding-left: 2px;
+    border: none;
+    list-style: none;
+    display: inline;
+    }
+    
+#bread ul li:before {
+    content: "\0020 \0020 \0020 \00BB \0020";
+    color: #333;
+    }
+    
+#bread ul li.first:before {
+    content: " ";
+    }
+#bread a {
+    text-decoration: none;
+    color: inherit;
+}
+#bread a:hover {
+    color: #FFFFFF;
+}
+#news_box {
+    text-align: justify;
+    float: right;
+    clear: none;
+    border: #E5DB1F solid 1px;
+    background:#F5EBAF;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.88em;
+    width: 400px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.news_box_h {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#news_box dt {
+    padding-top: 2px;
+}
+#news_box dd {
+    margin-left: 10px;
+}
+.centered {
+    text-align: center;
+}
+.home_project_div_left {
+    text-align: justify;
+    background: #DCDCDC;
+    width: 450px;
+    float: left;
+    border: #CCCCCC solid 1px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.home_project_div_right {
+    text-align: justify;
+    background: #DCDCDC;
+    width: 450px;
+    float: right;
+    border: #CCCCCC solid 1px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#mmm_potatoes {
+    float: left; 
+    padding-right: 5px;
+}
+.compsol {
+ background: #DCDCDC;
+
+ /* background: #DCDCDC url(/images/sol_jumble_l.png) no-repeat 50px 30px;
+ */
+}
+#sol_site_logo {
+    margin-left: 30px;
+    float: left;
+    margin-top: 5px;
+}
+#usda_funding_logo {
+    margin-left: 40px;
+    float: left;
+    margin-top: 8px;
+}
+#knob {
+    background:transparent url(/images/slider.png) no-repeat scroll center center;
+    cursor:pointer;
+    height:15px;
+    width:15px;
+}
+#slider {
+    background:transparent url(/images/area.png) no-repeat scroll center center;
+    height:14px;
+    width:300px;
+}
+.small_font {
+    font-size: 0.8em;
+}
+.detach_div {
+  float: right;
+  width: 20px;
+  height: 12px;
+  margin-top: 0.5em;
+  margin-right: 0em;
+  background: url(/images/new_window.png) no-repeat 0;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+}
+.search_result {
+    border: #CCCCCC dashed 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+.search_error {
+    border: #FFCCCC dashed 2px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+/* sorting table pagination */
+ul.pagination {
+  margin      :0;
+  padding     :0 0.5em;
+  list-style  :none; }
+ul.pagination li {
+  margin      :0;
+  padding     :0 0 2px 0;
+  float       :left;
+  list-style  :none; }
+ul.pagination li a {
+  padding     :1px 3px 3px 3px;
+  display     :block; }
+ul.pagination li a.currentPage {
+  background  :#e4ebff; }
+
+caption {
+    text-align: center;
+}
+.icon {
+    border: none;
+    width:  2em;
+    height: 2em;
+    padding: 0.25em;
+    vertical-align: middle;
+}
+.mini_icon {
+    border: none;
+    width:  1.5em;
+    height: 1.5em;
+    padding: 0.2em;
+    vertical-align: middle;
+}
+
+/* for gene report page fields */
+.field_label {
+    font-size: 1em;
+    font-weight: 700;
+}
+.field_value {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.field {
+    float: left;
+    margin-left:    0em;
+    margin-right:   1.5em;
+    margin-top:     0em;
+    margin-bottom:  0.5em;
+}
+/*******************************/
+
+/* for a little box telling the user about data available on the FTP site */
+.download_notice {
+    padding: 0px;
+    margin: 0px;
+    border: 1px;
+    border-style: dashed;
+    border-color: #DFDFDF;
+}
+.download_notice p {
+    padding: 0px;
+    margin: 0px;
+}
+.faq {
+    padding-bottom: 0.5em;
+}
+.faq dt {
+    font-weight: 600;
+}
+.faq dd {
+    margin-left: 1em;
+}
+.recaptcha {
+    padding: 10px;
+    margin: 10px;
+    width: 340px;
+    border: 1px;
+    border-style: dashed;
+    border-color: #CF5F5F;
+}
+.recaptcha p {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+/* end of download_notice */
+
+
+/***** multiple sequence alignment styles for Sol::SimpleAlignDB *****/
+.msa {                                       
+    width: 910px;                            
+    margin: 5px;                             
+    padding: 5px;                            
+    height: auto;                            
+    background: #DDDDDD;                     
+    border: #999999 1px solid;               
+    font-family: monospace;                  
+    font-weight: bold;
+}                                            
+.msa_legend {                                
+    width: auto;                             
+    /* legend will appear on the left */     
+    float:          left;                    
+    text-align:     right;                   
+    margin-right:   1ex;                     
+}                                            
+.msa_seqs{                                   
+    width: auto;                             
+    overflow-y: hidden;                          
+    overflow-x: scroll;                          
+    white-space: nowrap;
+    background: #333333;                     
+}                                            
+.msa_seq {
+    color: #CCCCCC;
+}                                            
+.msa_seq span{                            
+}                                            
+.msa_spacer {                                
+    height: 5px;                             
+}                                            
+.msa_con_seq {
+}                                            
+.msa_con_seq span{                            
+    color: #FFFFFF;    
+    background: #3333FF;                     
+}                                            
+
+/* character classes */
+.msa_char_a {          
+    color: #99FF99;    
+}
+.msa_char_c {
+    color: #9999FF;
+}
+.msa_char_g {
+    color: #A9A9A9;
+}
+.msa_char_t {
+    color: #FFFF99;
+}
+.msa_char_gap{
+    color: #666666;
+}
+
+/* coordinate classes */
+.msa_char_mismatch {
+    color: #FFFFFF;
+    background: #FF9999;
+}
+.msa_con_seq .msa_char_mismatch {
+    background: #FF9999;
+}
+.msa_char_snp {
+    color: #FFFFFF;
+    background: #FF3333;
+}
+.msa_con_seq .msa_char_snp {
+    background: #FF3333;
+}
+
+/***** end of Sol::SimpleAlignDB styles ****/
+
+.tip_link_menu {
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    padding: 2px;
+    text-align: left;
+    width: 100px;
+    height: 30px;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+}
+
+
+.clear {
+    display: block;
+    clear: both;
+    line-height: 0;
+}
+
+div.line {
+    clear:  both;
+    height: 2px;
+    width:  92%;
+    margin: 10px auto;
+    padding: 0;
+    background: #000000;
+}
+div.line_shadow {
+    width: 100%;
+    position: relative;
+    left: 2px;
+    top: 3px;
+    height: 2px;
+    background: #D0D0D0;
+}
+
+.ts_div {
+    margin: 1em;
+}
+.ts_field {
+    float: left;
+    padding: 0;
+}
+.ts_buttons {
+    float: left;
+    margin-left: 3px;
+}
+
+.omni_search {
+    padding: 0.5em 0;
+}
+/*
+#contextmenu { border:1px solid #999; padding:0; background:#eee; width:200px; list-style-type:none; display:none; }
+#contextmenu .separator { border-top:1px solid #999; }
+#contextmenu li { margin:0; padding:0; }
+#contextmenu li a { display:block; padding:5px 10px 5px 35px; width:155px; font-size:12px; text-decoration:none; font-family:tahoma,arial,sans-serif; color:#000; background-position:8px 8px; background-repeat:no-repeat; }
+#contextmenu li a:hover { background-color:#ddd; }
+#contextmenu li a.disabled { color:#ccc; font-style:italic; }
+#contextmenu li a.disabled:hover { background-color:#eee; }
+*/
+
+/* context menu items */
+/*
+#contextmenu li a.edit  { background-image:url(edit.png); }
+#contextmenu li a.cut   { background-image:url(cut.png); }
+#contextmenu li a.copy  { background-image:url(copy.png); }
+#contextmenu li a.paste { background-image:url(paste.png); }
+#contextmenu li a.delete    { background-image:url(delete.png); }
+#contextmenu li a.quit  { background-image:url(quit.png); }
+*/
+
+
+/* notimoo for growl-style notifications */
+.notimoo{position:absolute;z-index:999;cursor:pointer;-moz-border-radius:10px;-webkit-border-ra
+dius:10px;padding:10px;border:3px;border-style:solid;border-color:#B2B2B2;background:#333;color
+:#FFF;}.notimoo .title{font-weight:bold;border-bottom:1px solid;}.notimoo .message{margin-top:2
+px;}.notimoo a{color:#FFF;}
+/* end of notimoo styles */
+
+/* OverText style */
+label.overTxtLabel {
+    	font-size: 0.8em;
+	color: #999;
+	color: #999999;
+}
+

@@ -1,0 +1,41 @@
+<div id='search_annotation'>
+
+       <table id='uniref_result_table' class="table_large">
+        <thead>
+           <tr>
+           <th>Accession</th>
+           <th>Description</th>
+           <th>Rank</th>
+           <th>Score</th>
+           <th>E-value</th>
+           </tr>
+            </thead>
+            <tbody>
+
+           <TMPL_LOOP NAME="search_results">
+          <tr>
+                  <td align='center'>
+                  <a href='http://www.uniprot.org/uniref/<TMPL_VAR NAME="id">'><TMPL_VAR NAME="id"></a>
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="description">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="rank">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="score">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="expect">
+                  </td>
+          </tr>
+           </TMPL_LOOP>
+        </tbody>
+       </table>
+</div>
+
+<script type='text/javascript'>
+    new SortingTable('uniref_result_table', {zebra: true});
+</script>
+

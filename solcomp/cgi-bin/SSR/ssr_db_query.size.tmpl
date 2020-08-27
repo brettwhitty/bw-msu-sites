@@ -1,0 +1,100 @@
+<div id='ssr_by_size'>
+        <div class='detach_div'></div>
+
+       <ul>
+           <li>Please note that some of the SSR contatining sequences do not have predicted primers from Primer3 software</li>
+           <li>Please note some of the SSR contaning ESTs do not have annotation information</li>
+           <li>The following information are listed in the table:</li>
+           <ul>
+           <li>Accession: Sequence accession number and link to PlantGDB PUTs entry</li>
+           <li>SSR Type: SSR motif in the database</li>
+           <li>Forward Primer, Reverse Primer: predicted primer sequences from Primer3 software to amplify the SSR sequences</li>
+           <li>Product Size: the estimated size of the PCR product by using the predicted primer set</li>
+           <li>Product Start, Product End: The start and end position of the PCR product within the EST sequence</li>
+           <li>Annotation: the putative annotation if any is available</li>
+           </ul>
+       </ul>
+
+           <h3>
+               Solanaceae Genomics Resource <i><TMPL_VAR NAME="new_species_param"></i> SSR database sequence with <TMPL_VAR NAME="motif_param"> motif, SSR length between <TMPL_VAR NAME="min_length_param"> and <TMPL_VAR NAME="max_length_param">
+           </h3>
+       <table id='result_table' class="table_medium">
+        <thead>
+           <tr>
+           <th>
+               Accession
+           </th>
+           <th>
+               SSR Type
+           </th>
+           <th>
+              SSR Size
+           </th>
+           <th>
+              SSR Start
+           </th>
+           <th>
+              SSR End
+           </th>
+           <th>
+               Forward/Reverse Primer
+           </th>
+           <th>
+               Product Size
+           </th>
+           <th>
+               Product Start
+           </th>
+           <th>
+               Product End
+           </th>
+           <th>
+               Annotation
+           </th>
+           </tr>
+            </thead>
+            <tbody>
+
+           <TMPL_LOOP NAME="hits_table">
+          <tr>
+                  <td align='center'>
+                  <a href='/gene_overview.php?id=<TMPL_VAR NAME="id_display">'><TMPL_VAR NAME="id_display"></a>
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="SSR">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="size">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="ssr_start">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="ssr_end">
+                  </td>
+               <TMPL_IF NAME='has_primer'>
+               <td align='center'>
+                  F=<TMPL_VAR NAME="for_pri">
+                  <br />
+                  R=<TMPL_VAR NAME="rev_pri">
+                  </td>
+               <TMPL_ELSE>
+               <td align='center'>N/A</td>
+               </TMPL_IF>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_size">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_start">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_end">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="annotation">
+                  </td>
+          </tr>
+           </TMPL_LOOP>
+        </tbody>
+       </table>
+</div>

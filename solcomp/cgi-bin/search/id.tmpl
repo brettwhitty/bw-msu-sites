@@ -1,0 +1,23 @@
+<div id='search_id'>
+       <table id='result_table' class="table_medium">
+        <thead>
+           <tr>
+           <th>Source</th>
+           <th>Accession</th>
+           </tr>
+            </thead>
+            <tbody>
+
+           <TMPL_LOOP NAME="search_results">
+          <tr>
+                  <td align='center'>
+                  <TMPL_VAR NAME="db_name">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="id">
+                  </td>
+          </tr>
+           </TMPL_LOOP>
+        </tbody>
+       </table>
+</div>

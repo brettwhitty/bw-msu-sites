@@ -1,0 +1,63 @@
+<table class='table_large' style='margin: 0' id='<TMPL_VAR NAME="table_id">'>
+    <thead>
+        <tr>
+            <th align='center'>
+            <TMPL_VAR NAME="organism"> Locus ID
+            </th>
+            <th align='center'>
+            Score
+            </th>
+            <th align='center'>
+            E-value
+            </th>
+            <th align='center'>
+            Identity
+            </th>
+            <th align='center'>
+            Similarity
+            </th>
+            <th align='center'>
+            Coverage
+            </th>
+         </tr>
+    </thead>
+    <tbody>
+        <TMPL_LOOP NAME="hits_table">
+        <tr>
+            <td align='center'>
+            <a class='<TMPL_VAR NAME="link_class">' href='<TMPL_VAR NAME="link">' target='_blank'><TMPL_VAR NAME="hit_id"></a>
+            </td>
+            <td align='center'>
+            <TMPL_VAR NAME="score">
+            </td>
+            <td align='center'>
+            <TMPL_VAR NAME="evalue">
+            </td>
+            <td align='center'>
+            <TMPL_VAR NAME="identity">
+            </td>
+            <td align='center'>
+            <TMPL_VAR NAME="similarity">
+            </td>
+            <td align='center'>
+            <TMPL_VAR NAME="coverage">
+            </td>
+        </tr>
+        </TMPL_LOOP>
+    </tbody>
+</table>
+
+<script type='text/javascript'>
+    new SortingTable('<TMPL_VAR NAME="table_id">', {zebra: true});
+/*
+    $$('a.poplar_id_link').each( function(el) {
+        console.log(el.get('text'));
+        el.store('tip:text', 'test');
+    });
+    var myTips = new Tips('a.poplar_id_link', {fixed: true, className: 'tip_link_menu' });
+    
+    new Tips($$('a.poplar_id_link')), {
+        timeOut:    700,
+        fixed:      true,
+    });*/
+</script>

@@ -1,0 +1,27 @@
+4111	EGGNET	http://www.bgard.science.ru.nl/eggnet/eggnet01.html
+4113	PGSC	http://potatogenome.net/
+4113	Canadian Potato Genome Project	http://www.cpgp.ca/
+4113	International Potato Center	http://www.cipotato.org/
+4113	World Potato Congress	http://www.potatocongress.org/
+4113	National Potato Council	http://www.npcspud.com/
+4113	Potato Gene Engineering Network (PotatoGENE)	http://research.cip.cgiar.org/confluence/display/potatogene/Home
+4113	Cornell-Eastern Europe-Mexico International Collaborative Project in Potato Late Blight Control (CEEM)	http://ceem.cals.cornell.edu/
+4113	CGIAR Research: Areas of Research: Potato	http://www.cgiar.org/impact/research/potato.html
+4113	United States Potato Genebank	http://www.ars-grin.gov/ars/MidWest/NR6/
+4113	University of Maine Cooperative Extension Potato Program	http://www.umaine.edu/umext/potatoprogram/
+4081	SGN	http://sgn.cornell.edu/about/tomato_sequencing.pl
+4081	Tomato Expression Database	http://ted.bti.cornell.edu/
+4097	Tobacco Genome Initiative	http://www.pngg.org/tgi/
+4081	Wikipedia	http://en.wikipedia.org/wiki/Tomato
+4113	Wikipedia	http://en.wikipedia.org/wiki/Potato
+4102	Wikipedia	http://en.wikipedia.org/wiki/Petunia
+4072	Wikipedia	http://en.wikipedia.org/wiki/Capsicum_annuum
+4073	Wikipedia	http://en.wikipedia.org/wiki/Capsicum_frutescens
+4097	Wikipedia	http://en.wikipedia.org/wiki/Nicotiana_tabacum
+4100	Wikipedia	http://en.wikipedia.org/wiki/Nicotiana_benthamiana
+147425	Wikipedia	http://en.wikipedia.org/wiki/Solanum_bulbocastanum
+50514	Wikipedia	http://en.wikipedia.org/wiki/Potato
+4096	Wikipedia	http://en.wikipedia.org/wiki/Nicotiana_sylvestris
+62890	Wikipedia	http://en.wikipedia.org/wiki/Wild_tomato
+28526	Wikipedia	http://en.wikipedia.org/wiki/Wild_tomato
+

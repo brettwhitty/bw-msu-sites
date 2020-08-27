@@ -1,0 +1,124 @@
+<div id='sol_snps_report'>
+    <div class='detach_div'></div>
+
+    <div id='main'>
+        <h2>SNP Report for <TMPL_VAR NAME="id"></h2>
+
+<!--
+
+    <h3>Quick Links</h3>
+    <p>
+    <a href="#fasta">Show <TMPL_VAR NAME="id"> Sequence</a> - <a href="#diagram">Show <TMPL_VAR NAME="id"> Assembly Diagram</a> - <a href="#table">Assembly Components Table</a>
+    </p>
+-->
+
+    <h3><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> Summary</h3>
+        <div align="center">
+        <table id="table">
+                <tr><th align=right>Scientific Name</th><td align=left><i><TMPL_VAR NAME="sci_name"></i></td></tr>
+                <tr><th align=right>Assembly ID</th><td align=left><a href='/gene_overview.php?id=<TMPL_VAR NAME="asm_acc">'><TMPL_VAR NAME="asm_acc"></a></td></tr>
+                <tr><th align=right>Length</th><td align=left id='put_seq_len'><TMPL_VAR NAME="asm_len"></td></tr>
+<!--                <tr><th align=right>Orientation</th><td align=left> <TMPL_VAR NAME="asm_ori"></td></tr> -->
+                <tr><th align=right>Num. of Components</th><td align=left><TMPL_VAR NAME="num_elems"></td></tr>
+                <tr><th align=right>Functional Annotation</th><td align=left><TMPL_VAR NAME="function"></td></tr> 
+<!--                <tr><th align=right>Taxon ID</th><td align=left> <TMPL_VAR NAME="taxon_id"></td></tr> -->
+<!--                <tr><th align=right>Common Name</th><td align=left> <TMPL_VAR NAME="com_name"></td></tr> -->
+<!--                <tr><th align=right>Release Version</th><td align=left> <TMPL_VAR NAME="rel_ver"></td></tr> -->
+<!--                <tr><th align=right>Most Current Build?</th><td align=left> <TMPL_VAR NAME="rel_cur"></td></tr> -->
+        </table>
+        </div>
+
+    <h3><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> SNPs</h3>  
+        <div align="center">
+
+        <br>
+        <img src="<TMPL_VAR NAME="snp_img">" border="0" usemap="#snp_map">
+        <br>
+        <br>
+
+
+        <table width="300">
+            <tr>
+                <th align="center">SNP<br>Location</th>
+                <th align="center">Reference</th>
+                <th align="center">SNP</th>
+            </tr>
+
+                <TMPL_LOOP NAME="snp_loop">
+                <tr>
+                    <td align="center"><a href='#' class='snp_loc_link'><TMPL_VAR NAME="snp_location"></a></td>
+                    <td align="center"><TMPL_VAR NAME="reference"> (<TMPL_VAR NAME="ref_count">)</td>
+                    <td align="center"><TMPL_VAR NAME="snp"> (<TMPL_VAR NAME="snp_count">)</td>
+                </tr>
+                </TMPL_LOOP>
+         </table>
+        </div>
+
+<!--
+    <h3><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> Annotation</h3>
+        <div align="center">
+        <table width="80%">
+            <tr><th align="center"><TMPL_VAR NAME="species"> EST Assembly Annotation</th><th align="center">% Identity</th><th align="center">% Coverage</th></tr>
+
+            <tr><td align="left"><TMPL_VAR NAME="asm_anno"></td><td width="100px" align="center"><TMPL_VAR NAME="asm_sim"></td><td width="100px" align="center"><TMPL_VAR NAME="asm_cov"></td></tr>
+
+
+        </table>
+        </div>
+-->
+
+<!--
+    <h3 id="diagram"><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> Assembly Diagram</h4>
+    <div align="center">
+        <img src="<TMPL_VAR NAME="img">" border="0">
+    </div>
+
+    <h3 id="table"><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> Assembly Components</h3>
+    <div align="center">
+        <table width="425">
+        <tr>
+            <th align="center">TIGR EST<br>Accession</th>
+            <th align="center">Type</th>
+            <th align="center">Left<br>Coord</th>
+            <th align="center">Right<br>Coord</th>
+            <th align="center">Orient</th>
+
+        </tr>
+        <TMPL_LOOP NAME ="elem_table">
+           <TMPL_IF NAME="elem_ta_cur">
+            <tr>
+                        <td align=center><TMPL_VAR NAME="elem_acc"></td>
+                        <td align=center><TMPL_VAR NAME="elem_type"></td>
+                        <td align=center><TMPL_VAR NAME="left"></td>
+                        <td align=center><TMPL_VAR NAME="right"></td>
+                        <td align=center><TMPL_VAR NAME="elem_ori"></td>
+                    </tr>
+           <TMPL_ELSE>
+            <tr>
+                        <td align=center><a href="http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=nucleotide&val=<TMPL_VAR NAME="elem_acc">"><TMPL_VAR NAME="elem_acc"></a></td>
+                        <td align=center><TMPL_VAR NAME="elem_type"></td>
+                        <td align=center><TMPL_VAR NAME="left"></td>
+                        <td align=center><TMPL_VAR NAME="right"></td>
+                        <td align=center><TMPL_VAR NAME="elem_ori"></td>
+                        <td align=center>N/A</td>
+                    </tr>
+           </TMPL_IF>
+        </TMPL_LOOP>    
+        </table>
+    </div>
+-->
+    <h3 id="diagram"><TMPL_VAR NAME="id"> Multiple Sequence Alignment</h4>
+    <TMPL_VAR NAME="msa">
+<!--
+    <h3 id="fasta"><TMPL_VAR NAME="species"> EST Assembly <TMPL_VAR NAME="id"> Sequence</h3>
+    <div align="left">
+        <p style="font-family:monospace">
+            <TMPL_LOOP NAME="fasta">
+                <TMPL_VAR NAME="row"><BR>
+            </TMPL_LOOP>
+        </p>
+    </div>
+-->
+   </div>
+
+</div>

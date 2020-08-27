@@ -1,0 +1,27 @@
+164110	PlantGDB PUTs	157a	2007-01-25	12499	6791	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Nicotiana_langsdorffii_x_Nicotiana_sanderae/current_version/Nicotiana_langsdorffii_x_Nicotiana_sanderae.mRNA.PUT.fasta.bz2
+164110	TIGR Plant TAs	1	2006-06-05	12466	7207	ftp://ftp.tigr.org/pub/data/plantta/Nicotiana_langsdorffii_x_Nicotiana_sanderae
+28526	PlantGDB PUTs	163a	2008-03-17	8357	3718	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Solanum_pennellii/current_version/Solanum_pennellii.mRNA.PUT.fasta.bz2
+28526	TIGR Plant TAs	2	2006-09-28	8357	3772	ftp://ftp.tigr.org/pub/data/plantta/Solanum_pennellii
+286530	TIGR Plant TAs	2	2006-09-28	1008	716	ftp://ftp.tigr.org/pub/data/plantta/Solanum_lycopersicum_x_Solanum_pimpinellifolium
+33119	TIGR Plant TAs	5	2007-06-01	1708	750	ftp://ftp.tigr.org/pub/data/plantta/Petunia_axillaris
+4072	PlantGDB PUTs	171a	2009-06-12	117096	32336	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Capsicum_annuum/current_version/Capsicum_annuum.mRNA.PUT.fasta.bz2
+4072	TIGR Plant TAs	2	2006-09-28	31495	15404	ftp://ftp.tigr.org/pub/data/plantta/Capsicum_annuum
+4081	NCBI UniGene	35	2009-04-15	284219	18228	ftp://ftp.ncbi.nih.gov/repository/UniGene/Solanum_lycopersicum/
+4081	PlantGDB PUTs	171a	2009-06-11	307696	56845	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Solanum_lycopersicum/current_version/Solanum_lycopersicum.mRNA.PUT.fasta.bz2
+4081	TIGR Plant TAs	5	2007-06-01	253841	53791	ftp://ftp.tigr.org/pub/data/plantta/Solanum_lycopersicum
+4096	PlantGDB PUTs	163a	2008-03-27	8654	7612	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Nicotiana_sylvestris/current_version/Nicotiana_sylvestris.mRNA.PUT.fasta.bz2
+4096	TIGR Plant TAs	2	2006-09-28	8655	6775	ftp://ftp.tigr.org/pub/data/plantta/Nicotiana_sylvestris
+4097	NCBI UniGene	11	2008-06-27	159848	19753	ftp://ftp.ncbi.nih.gov/repository/UniGene/Nicotiana_tabacum/
+4097	PlantGDB PUTs	169a	2009-01-13	240956	114188	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Nicotiana_tabacum/current_version/Nicotiana_tabacum.mRNA.PUT.fasta.bz2
+4097	TIGR Plant TAs	5	2007-06-01	92001	44561	ftp://ftp.tigr.org/pub/data/plantta/Nicotiana_tabacum
+4100	PlantGDB PUTs	161a	2007-09-2	41676	18037	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Nicotiana_benthamiana/current_version/Nicotiana_benthamiana.mRNA.PUT.fasta.bz2
+4100	TIGR Plant TAs	5	2007-06-01	35814	17190	ftp://ftp.tigr.org/pub/data/plantta/Nicotiana_benthamiana
+4102	PlantGDB PUTs	159a	2007-06-14	14284	9884	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Petunia_x_hybrida/current_version/Petunia_x_hybrida.mRNA.PUT.fasta.bz2
+4102	TIGR Plant TAs	5	2007-06-01	14305	9796	ftp://ftp.tigr.org/pub/data/plantta/Petunia_x_hybrida
+4108	PlantGDB PUTs	163a	2008-03-17	7805	7110	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Solanum_chacoense/current_version/Solanum_chacoense.mRNA.PUT.fasta.bz2
+4108	TIGR Plant TAs	5	2007-06-01	7805	5935	ftp://ftp.tigr.org/pub/data/plantta/Solanum_chacoense
+4113	NCBI UniGene	33	2009-01-22	211067	18784	ftp://ftp.ncbi.nih.gov/repository/UniGene/Solanum_tuberosum/
+4113	PlantGDB PUTs	157a	2007-01-28	228381	70344	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Solanum_tuberosum/current_version/Solanum_tuberosum.mRNA.PUT.fasta.bz2
+4113	TIGR Plant TAs	2	2006-06-05	221081	81072	ftp://ftp.tigr.org/pub/data/plantta/Solanum_tuberosum
+62890	PlantGDB PUTs	163a	2008-03-17	8027	4024	http://www.plantgdb.org/download/Download/Sequence/ESTcontig/Solanum_habrochaites/current_version/Solanum_habrochaites.mRNA.PUT.fasta.bz2
+62890	TIGR Plant TAs	2	2006-09-28	8029	4305	ftp://ftp.tigr.org/pub/data/plantta/Solanum_habrochaites

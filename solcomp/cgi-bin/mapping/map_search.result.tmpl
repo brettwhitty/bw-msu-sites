@@ -1,0 +1,75 @@
+    <div id='sol_mapping_main'>
+        <div class='detach_div'></div>
+
+        <h2>Solanaceae to <TMPL_VAR NAME="organism"> Mapping Search Results</h2>
+           
+            <!-- content goes below -->
+
+               <p>
+                   Results for query <b><a href='/gene_overview.php?id=<TMPL_VAR NAME="id">' target='_blank'><TMPL_VAR NAME="id"></a></b> and e-value cutoff <b><TMPL_VAR NAME="e_value"></b>.
+               </p>
+
+               <table id='hits_table'>
+                <thead>
+           <tr>
+                  <th align='center'>
+                  <TMPL_VAR NAME="organism"> Locus ID
+                  </th>
+                  <th align='center'>
+                  Score
+                  </th>
+                  <th align='center'>
+                  E-value
+                  </th>
+                  <th align='center'>
+                  Identity
+                  </th>
+                  <th align='center'>
+                  Similarity
+                  </th>
+                  <th align='center'>
+                  Coverage
+                  </th>
+                  
+<!--
+                  <th align='center'>
+                  Species
+                  </th>
+-->
+                </tr>
+</thead>
+<tbody>
+                <TMPL_LOOP NAME="hits_table">
+                   <tr>
+                   <td align='center'>
+                           <a href='<TMPL_VAR NAME="link">' target='_blank'><TMPL_VAR NAME="hit_id"></a>
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="score">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="evalue">
+                   </td>
+<!--
+                   <td align='center'>
+                           <i><TMPL_VAR NAME="elem_species"></i>
+                   </td>
+-->
+                   <td align='center'>
+                           <TMPL_VAR NAME="identity">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="similarity">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="coverage">
+                   </td>
+                   </tr>
+                </TMPL_LOOP>
+</tbody>
+           </table>
+
+
+            <!-- content goes above -->
+
+    </div>

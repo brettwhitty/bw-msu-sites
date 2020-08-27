@@ -1,0 +1,28 @@
+<div id='search_annotation'>
+
+       <table id='result_table' class="table_medium">
+        <thead>
+           <tr>
+           <th>Source</th>
+           <th>Accession</th>
+           <th>Annotation Text</th>
+           </tr>
+            </thead>
+            <tbody>
+
+           <TMPL_LOOP NAME="search_results">
+          <tr>
+                  <td align='center'>
+                  <TMPL_VAR NAME="db_name">
+                  </td>
+                  <td align='center'>
+                  <a href='/gene_overview.php?id=<TMPL_VAR NAME="id">'><TMPL_VAR NAME="id"></a>
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="html">
+                  </td>
+          </tr>
+           </TMPL_LOOP>
+        </tbody>
+       </table>
+</div>

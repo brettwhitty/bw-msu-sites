@@ -1,0 +1,103 @@
+<div style='padding-bottom: 0.4em;'>
+    <div>
+        <span class='field_label'>
+            Cluster:
+        </span>
+        <span class='field_value'>
+            <TMPL_VAR NAME="clid">
+        </span>
+    </div>
+    <div>
+        <span class='field_label'>
+            Annotation(s):
+        </span>
+        <span class='field_value'>
+            <TMPL_VAR NAME="annotation">
+        </span>
+    </div>
+</div>
+<!-- allow this to be hidden -->
+<div id='orthomcl_cluster_members'>
+    <table id='orthomcl_result_table' style='width: 100%;'>
+    <thead>
+           <tr>
+                  <th align='center'>
+                  Member Accession
+                  </th>
+                  <th align='center'>
+                  Species
+                  </th>
+                  <th align='center'>
+                  Aligned to Sol BAC(s)
+                  </th>
+                  <th align='center'>
+                  UniRef50 Top Hit
+                  </th>
+                  <th align='center'>
+                  Score
+                  </th>
+                  <th align='center'>
+                  E-value
+                  </th>
+                  <th align='center'>
+                  % Identity
+                  </th>
+                  <th align='center'>
+                  % Coverage 
+                  </th>
+                </tr>
+    </thead>
+    <tbody>
+                <TMPL_LOOP NAME="member_table">
+                   <tr>
+                       <td align='center'>
+                            <TMPL_VAR NAME="member_name">
+                     </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="species">
+                   </td>
+                   <TMPL_IF NAME="has_gbrowse">
+                       <td align='center'>
+                            <a href='/cgi-bin/gbrowse/solanaceae?name=Sequence:<TMPL_VAR NAME="url_member_name">'>View</a>
+                       </td>
+                   <TMPL_ELSE>
+                     <td align='center'>
+                     -
+                     </td>
+                   </TMPL_IF>
+                   <TMPL_IF NAME="has_link">
+                       <td align='center'>
+                              <a href='http://www.uniprot.org/uniref/?sort=score&query=<TMPL_VAR NAME="up_id">'><TMPL_VAR NAME="up_id"></a>
+                       </td>
+                   <TMPL_ELSE>
+                       <td align='center'>
+                        <TMPL_VAR NAME="up_id">
+                       </td>
+                   </TMPL_IF>
+                   <td align='center'><TMPL_VAR NAME="score"></td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="evalue">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="ident">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="cov">
+                   </td>
+                   </tr>
+                </TMPL_LOOP>
+            </tbody>
+    </table>
+</div>
+</p>
+<ul id='result_table_pagination' class='pagination'></ul>
+<script type='text/javascript'>
+    new SortingTable('orthomcl_result_table', {zebra: true});
+    new CollapseDiv('orthomcl_cluster_members', 'Cluster Membership', true);
+/*
+    new SortingTable( 'result_table', {
+        paginator: new PaginatingTable( 'result_table', 'result_table_pagination' )
+    });
+*/
+</script>
+

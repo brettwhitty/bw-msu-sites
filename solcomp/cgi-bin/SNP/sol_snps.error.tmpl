@@ -1,0 +1,27 @@
+    <div id='search_result' class='search_error'>
+
+        <TMPL_IF NAME='bug'>
+            <h3>Error</h3>
+
+            <p><TMPL_VAR NAME='message'></p>
+            <p>Please report that you encountered this error along with
+               details of how it occurred to the site maintainers at 
+               <a href='mailto:sgr@plantbiology.msu.edu'>sgr@plantbiology.msu.edu</a>
+            </p>
+        <TMPL_ELSE>
+            <h2>SNP Report for <TMPL_VAR NAME="id"></h2>
+
+            <h3>No SNPs were found for '<TMPL_VAR NAME="id">'</h3>
+
+            <p>Please verify that you've entered a valid identifier.</p>
+
+            <h4>Hints</h4>
+            <ul>
+                <li>PlantGDB PUT identifiers are of the form <i>PUT-###x-Species_name-###</i></li>
+                <li>Genbank accession numbers, not GI numbers, are supported.</li>
+                <li>Omit version suffixes from Genbank accessions.</li>
+                <li>Searches are case insensitive.</li>
+            </ul>
+        </TMPL_IF>
+
+    </div>

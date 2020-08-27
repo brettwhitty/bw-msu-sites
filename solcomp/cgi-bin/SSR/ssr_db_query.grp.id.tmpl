@@ -1,0 +1,75 @@
+       <table id='predicted_ssr_table' style="margin:0; padding:0" class="table_large">
+        <thead>
+           <tr>
+           <th title='SSR motif in the database'>
+               SSR Type
+           </th>
+           <th title=''>
+              SSR Size
+           </th>
+           <th>
+              SSR Start
+           </th>
+           <th>
+              SSR End
+           </th>
+           <th title='Predicted primer sequences from Primer3 software to amplify the SSR sequences'>
+               Forward Primer
+           </th>
+           <th title='Predicted primer sequences from Primer3 software to amplify the SSR sequences'>
+               Reverse Primer
+           </th>
+           <th title='The estimated size of the PCR product using the predicted primer set'>
+               Product Size
+           </th>
+           <th title='The end position of the PCR product within the EST sequence'>
+               Product Start
+           </th>
+           <th title='The end position of the PCR product within the EST sequence'>
+               Product End
+           </th>
+           </tr>
+            </thead>
+            <tbody>
+
+           <TMPL_LOOP NAME="hits_table">
+          <tr>
+                  <td align='center'>
+                  <TMPL_VAR NAME="SSR">
+                  </td>
+                  <td align='center'>
+                  <TMPL_VAR NAME="size">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="ssr_start">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="ssr_end">
+                  </td>
+               <TMPL_IF NAME='has_primer'>
+               <td align='left'>
+                  <TMPL_VAR NAME="for_pri">
+               </td>
+               <td align='left'>
+                  <TMPL_VAR NAME="rev_pri">
+               </td>
+               <TMPL_ELSE>
+               <td align='center'>N/A</td>
+               <td align='center'>N/A</td>
+               </TMPL_IF>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_size">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_start">
+                  </td>
+               <td align='center'>
+                  <TMPL_VAR NAME="product_end">
+                  </td>
+          </tr>
+           </TMPL_LOOP>
+        </tbody>
+       </table>
+<script type='text/javascript'>
+    new SortingTable('predicted_ssr_table', {zebra: true});
+</script>

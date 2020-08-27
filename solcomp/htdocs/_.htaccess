@@ -1,0 +1,11 @@
+##
+## .htaccess file for switching the site to maintenance mode
+## 
+## # enable 
+##     mv .htaccess .htaccess.default ; mv _index.html index.html ; mv _.htaccess .htaccess
+##
+## # disable 
+##     mv .htaccess _.htaccess ; mv index.html _index.html ; mv .htaccess.default .htaccess
+##
+RedirectMatch 301 (.*)\.php http://solanaceae.plantbiology.msu.edu/index.html
+RedirectMatch 301 .*/cgi-bin/.*$ http://solanaceae.plantbiology.msu.edu/index.html

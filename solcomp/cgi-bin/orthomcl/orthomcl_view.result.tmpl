@@ -1,0 +1,99 @@
+    <div id='orthomcl_contents'>
+
+
+        <div class='detach_div'></div>
+
+        <h2>OrthoMCL Cluster Membership View</h2>
+           
+            <!-- content goes below -->
+<p>
+               <dt>
+                   Cluster:
+               </dt>
+               <dd>
+                  <TMPL_VAR NAME="clid">
+               </dd>
+               <dt>
+                   Annotation(s):
+               </dt>
+               <dd>
+                   <TMPL_VAR NAME="annotation">
+               </dd>
+</p>
+<p>
+               <table id='result_table'>
+<thead>
+           <tr>
+                  <th align='center'>
+                  Member Accession
+                  </th>
+                  <th align='center'>
+                  Species
+                  </th>
+                  <th align='center'>
+                  Aligned to Sol BAC(s)
+                  </th>
+                  <th align='center'>
+                  UniRef50 Top Hit
+                  </th>
+                  <th align='center'>
+                  Score
+                  </th>
+                  <th align='center'>
+                  E-value
+                  </th>
+                  <th align='center'>
+                  % Identity
+                  </th>
+                  <th align='center'>
+                  % Coverage 
+                  </th>
+                </tr>
+</thead>
+<tbody>
+                <TMPL_LOOP NAME="member_table">
+                   <tr>
+                       <td align='center'>
+                            <TMPL_VAR NAME="member_name">
+                     </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="species">
+                   </td>
+                   <TMPL_IF NAME="has_gbrowse">
+                       <td align='center'>
+                            <a href='/cgi-bin/gbrowse/solanaceae?name=Sequence:<TMPL_VAR NAME="url_member_name">' target='gbrowse'>View</a>
+                       </td>
+                   <TMPL_ELSE>
+                       <td align='center'>
+                     </td>
+                   </TMPL_IF>
+                   <TMPL_IF NAME="has_link">
+                       <td align='center'>
+                              <a href='http://www.uniprot.org/uniref/?sort=score&query=<TMPL_VAR NAME="up_id">'><TMPL_VAR NAME="up_id"></a>
+                       </td>
+                   <TMPL_ELSE>
+                       <td align='center'>
+                        <TMPL_VAR NAME="up_id">
+                       </td>
+                   </TMPL_IF>
+                   <td align='center'>
+                           <TMPL_VAR NAME="score">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="evalue">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="ident">
+                   </td>
+                   <td align='center'>
+                           <TMPL_VAR NAME="cov">
+                   </td>
+                   </tr>
+                </TMPL_LOOP>
+</tbody>
+           </table>
+</p>
+
+            <!-- content goes above -->
+
+    </div>
